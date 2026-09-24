@@ -1,0 +1,408 @@
+:root {
+      --bg: #f3efe6;
+      --ink: #1c1915;
+      --muted: #5f584e;
+      --line: #e2d9cc;
+      --card: #fffdf9;
+      --accent: #9a3b1d;
+      --accent-soft: #f6e6dc;
+      --header: #171410;
+      --header-muted: #c9bfb2;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(900px 420px at 0% -10%, #f8e4d4 0%, transparent 60%),
+        var(--bg);
+      color: var(--ink);
+      font-family: Outfit, "Avenir Next", "Segoe UI", sans-serif;
+      font-weight: 380;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    .site-header {
+      background: var(--header);
+      color: #f7f3ec;
+      padding-top: var(--nav-offset, 5.5rem);
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 30;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1080px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem 1.25rem;
+      margin: 0;
+      padding: 0.65rem 1rem;
+      background: rgba(23, 20, 16, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0 0 22px 22px;
+      box-shadow: 0 12px 40px rgba(23, 20, 16, 0.28);
+      backdrop-filter: blur(14px);
+      font-size: 0.92rem;
+    }
+
+    .brand {
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--header-muted);
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+    }
+
+    .nav a,
+    .nav button {
+      color: var(--header-muted);
+      text-decoration: none;
+      background: none;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible,
+    .nav button:hover,
+    .nav button:focus-visible { color: #fff; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2rem;
+      align-items: end;
+      padding: 2.5rem 0 2.2rem;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 100%;
+      font-family: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(2.15rem, 9vw, 4.6rem);
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+      overflow-wrap: break-word;
+    }
+
+    .role {
+      margin: 1rem 0 0;
+      max-width: 36rem;
+      color: #f0e6da;
+      font-size: 1.15rem;
+    }
+
+    .role span { color: #e7b39a; }
+
+    .years {
+      margin: 0;
+      text-align: right;
+    }
+
+    .years strong {
+      display: block;
+      font-family: Fraunces, Palatino, Georgia, serif;
+      font-size: 3.4rem;
+      font-weight: 560;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+    }
+
+    .years span {
+      color: var(--header-muted);
+      font-size: 0.85rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.4rem;
+      padding: 0 0 1.5rem;
+      border-top: 1px solid #3a342c;
+      margin: 0;
+    }
+
+    .contacts a {
+      color: #f7f3ec;
+      text-decoration: none;
+    }
+
+    .contacts a:hover { text-decoration: underline; }
+
+    main { padding: 2.2rem 0 4rem; }
+
+    #top,
+    #summary,
+    #experience,
+    #skills,
+    #education { scroll-margin-top: calc(var(--nav-offset, 5.5rem) + 0.6rem); }
+
+    .section-kicker {
+      margin: 0 0 0.8rem;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-family: Fraunces, Palatino, Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 560;
+      letter-spacing: -0.03em;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .prose p { margin: 0 0 0.9rem; }
+
+    .card, .role-card, .edu, .langs, .skill-group {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .card { padding: 1.25rem 1.35rem 0.4rem; }
+
+    blockquote {
+      margin: 0;
+      padding: 1.25rem 1.35rem;
+      background: var(--accent-soft);
+      border-radius: 16px;
+      color: #6a2d18;
+    }
+
+    blockquote p {
+      margin: 0;
+      font-family: Fraunces, Palatino, Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin-top: 1rem;
+      padding: 1.15rem 1.25rem;
+      border-left: 3px solid var(--accent);
+      background: var(--card);
+      border-radius: 0 16px 16px 0;
+    }
+
+    .lead h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .lead p { margin: 0; color: var(--muted); }
+
+    .company { margin: 0 0 1.6rem; }
+
+    .company-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.7rem;
+    }
+
+    .company-head h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .company-head p,
+    .when,
+    .meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .role-card { padding: 1rem 1.15rem 0.3rem; margin: 0 0 0.7rem; }
+
+    .role-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    .role-top h4 { margin: 0; font-size: 1.02rem; }
+
+    .track {
+      margin: 0.85rem 0 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    ul { margin: 0.55rem 0 0.85rem; padding: 0 0 0 1.1rem; }
+    li { margin: 0.28rem 0; }
+    li::marker { color: var(--accent); }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .skill-group { padding: 0.95rem 1rem 1rem; }
+
+    .skill-group h3 {
+      margin: 0 0 0.65rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .chips span {
+      padding: 0.28rem 0.55rem;
+      border-radius: 999px;
+      background: #f6f1e8;
+      border: 1px solid var(--line);
+      font-size: 0.86rem;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .edu, .langs { padding: 1.15rem 1.25rem; }
+
+    .edu h3, .langs h3 { margin: 0.2rem 0; font-size: 1.05rem; }
+
+    footer {
+      padding: 0 0 2.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .pdf {
+      display: inline-block;
+      margin-top: 0.4rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .pdf-dialog {
+      width: min(980px, calc(100vw - 2rem));
+      height: min(88vh, 920px);
+      max-width: none;
+      max-height: none;
+      margin: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 16px;
+      background: #141210;
+      color: #f7f3ec;
+      overflow: hidden;
+    }
+
+    .pdf-dialog::backdrop {
+      background: rgba(20, 16, 12, 0.72);
+    }
+
+    .pdf-dialog[open] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pdf-dialog-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 0.9rem 0.75rem 1.1rem;
+    }
+
+    .pdf-dialog-bar strong {
+      font-family: Fraunces, Palatino, Georgia, serif;
+      font-weight: 560;
+    }
+
+    .pdf-close {
+      color: #171410;
+      background: #f4f1ea;
+      border: 0;
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .pdf-dialog iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    body:has(.pdf-dialog[open]) .topbar {
+      visibility: hidden;
+    }
+
+    @media (max-width: 760px) {
+      .hero, .intro, .bottom, .company-head, .role-top {
+        grid-template-columns: minmax(0, 1fr);
+        display: grid;
+      }
+
+      .years { text-align: left; }
+      .years strong { font-size: 2.4rem; }
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0 0 18px 18px;
+      }
+    }

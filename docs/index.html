@@ -1,55 +1,326 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>José David López</title>
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-      background: #1a1a1a;
-      color: #f4f4f4;
-      font-family: system-ui, sans-serif;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.7rem 1rem;
-      background: #111;
-      border-bottom: 1px solid #2c2c2c;
-    }
-    header strong {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    header a {
-      color: #111;
-      background: #f4f4f4;
-      text-decoration: none;
-      padding: 0.4rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    iframe {
-      display: block;
-      width: 100%;
-      height: calc(100% - 49px);
-      border: 0;
-      background: #fff;
-    }
-  </style>
+  <title>José David López · Senior Software & Cloud Engineer</title>
+  <meta name="description" content="Resume of José David López, senior Java and AWS engineer with 13+ years building backend systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@380;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <strong>José David López - Senior Software & cloud Engineer Java | Aws</strong>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#top">José David López</a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#summary">Summary</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="Fullstack_JoseDavidLopezHdez_v2.1.pdf" data-open-pdf>PDF</a>
+        </nav>
+      </div>
+      <div class="hero" id="top">
+        <div>
+          <h1>José David<br>López</h1>
+          <p class="role">Senior Software &amp; Cloud Engineer <span>Java · AWS</span></p>
+        </div>
+        <p class="years"><strong>13+</strong><span>years building backends</span></p>
+      </div>
+      <p class="contacts">
+        <a href="mailto:j.david@programmer.net">j.david@programmer.net</a>
+        <a href="Fullstack_JoseDavidLopezHdez_v2.1.pdf" data-open-pdf>Original resume (PDF)</a>
+      </p>
+    </div>
   </header>
-  <iframe
-    src="Fullstack_JoseDavidLopezHdez_v2.pdf"
-    title="Currículum de José David López"
-  ></iframe>
+
+  <main class="wrap">
+    <section id="summary">
+      <p class="section-kicker">Career summary</p>
+      <div class="intro">
+        <div class="card prose">
+          <p>David is a 13+ year veteran back-end developer. He has primarily worked with Java, but he is also proficient in Python and Golang. Microservices architecture is the ideal environment for David, as it is the most commonly used approach, especially under AWS.</p>
+          <p>David typically operates within agile methodologies, showing a keen interest in exploring new cloud technologies and applying his knowledge whenever possible.</p>
+          <p>Currently David is studying the top trend technologies related to IA (LLMs, RAG, agents and ML system design) and working as a <strong>fullstack freelancer</strong> (React and TypeScript).</p>
+        </div>
+        <blockquote>
+          <p>“I enjoy taking the lead and empowering my team to excel in the cloud.”</p>
+        </blockquote>
+      </div>
+      <div class="lead">
+        <h3>Lead skills</h3>
+        <p>Collaborated with product managers to define technical solutions aligned with business needs. Mentored team members, conducted code reviews, and promoted reusable architectures and best practices. Led refactoring, process improvements, and performance optimization initiatives. Managed team priorities, conflict resolution, workload planning, and delivery execution.</p>
+      </div>
+    </section>
+
+    <section id="experience" style="margin-top: 3rem;">
+      <p class="section-kicker">Career history</p>
+      <h2>Experience</h2>
+
+      <div class="company">
+        <div class="company-head">
+          <h3>Freelance</h3>
+          <p>Remote · Nov 2025 – Present</p>
+        </div>
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Full-Stack Java / React / AWS</h4>
+            <p class="when">Nov 2025 – Present</p>
+          </div>
+          <p class="meta">Colegio Cima de Hidalgo · occasional support</p>
+          <p class="track">Front</p>
+          <ul>
+            <li>Principal owner of the school payments system, a React + TypeScript SPA for student enrollment, tuition payments, user administration, and operational reporting.</li>
+            <li>Core React developer building modular, scalable client applications with Vite, Material UI, React Router, and reusable dashboard and detail-view patterns.</li>
+            <li>Owner of payment workflows including payment creation, batch processing, and receipt viewing (PDF).</li>
+            <li>Developer of entity management modules (CRUD, detail views, parent and guardian data) integrated with backend REST APIs.</li>
+            <li>Security and platform owner implementing JWT authentication, route protection, error boundaries, and centralized API and error handling.</li>
+          </ul>
+          <p class="track">Back</p>
+          <ul>
+            <li>Core backend developer building modular services with Spring Web, Spring Data JPA, MySQL, Lombok, and reusable CRUD patterns across controllers, DTOs, converters, and repositories.</li>
+            <li>Security and platform contributor implementing JWT authentication, Spring Security filters, role and privilege-aware access, centralized exception handling, and standardized API responses.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="company">
+        <div class="company-head">
+          <h3>Insulet</h3>
+          <p>Tijuana · Remote · Oct 2024 – Present</p>
+        </div>
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Sr Java Developer &amp; AWS Cloud Engineer</h4>
+            <p class="when">Oct 2024 – Present</p>
+          </div>
+          <ul>
+            <li>Feature lead, with end-to-end ownership of strategic product enhancements: from requirement gathering and architectural design to implementation, testing, performance optimization, and long-term maintenance.</li>
+            <li>Technical mentor and coach for junior developers, fostering growth through code reviews, pair programming, and architectural guidance.</li>
+            <li>Core Java developer specializing in modular, scalable backend systems using Spring Boot and AWS-native microservices and Lambdas.</li>
+            <li>Infrastructure-as-code contributor, supporting and extending AWS CloudFormation stacks for secure, compliant, and automated deployments.</li>
+            <li>Principal owner of the Amazon MSK cluster, responsible for configuration, scaling, monitoring, and consumer optimization across distributed services.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="company">
+        <div class="company-head">
+          <h3>Globant</h3>
+          <p>CDMX · Remote · May 2018 – Sep 2024</p>
+        </div>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Sr Java Developer · DirecTV</h4>
+            <p class="when">Jan 2024 – Sep 2024</p>
+          </div>
+          <ul>
+            <li>Designed and implemented cloud components including Lambdas, microservices, and ETL processes.</li>
+            <li>Transitioned existing Java services and data pipelines to cloud-based solutions.</li>
+            <li>Supported software release cycles, keeping deployments smooth and downtime low.</li>
+            <li>Troubleshot complex issues as Tier 3 support, improving system stability and performance.</li>
+            <li>Developed unit, integration, and functional tests to validate functionality and robustness.</li>
+            <li>Joined code review sessions, giving feedback to peers and integrating suggestions.</li>
+            <li>Worked with the team lead and application owner on requirements and architectural strategy.</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Java Technical Lead · Banco Hipotecario de León (BHDL)</h4>
+            <p class="when">Jul 2021 – Nov 2023</p>
+          </div>
+          <ul>
+            <li>Coordinated the backend team: assigning tasks, coaching, code reviews, clarifying requirements, and translating high-level requirements into low-level ones.</li>
+            <li>Worked with product managers to identify improvements, gather requirements, propose approaches, and act as the team’s main point of contact.</li>
+            <li>Supported other backend teams on cross-functional components.</li>
+            <li>Guided the team to meet sprint commitments.</li>
+            <li>Main point of contact with integration teams and third parties.</li>
+            <li>Main developer and owner of payment services.</li>
+            <li>Member of the customer architecture board, proposing and discussing improvements and new solutions.</li>
+            <li>Designed, implemented, and maintained architecture solutions.</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Senior Java Backend Developer · Banco Hipotecario de León</h4>
+            <p class="when">Oct 2020 – May 2021</p>
+          </div>
+          <ul>
+            <li>Main developer of AWS Lambda integrators for third-party services.</li>
+            <li>Helped teammates with their tasks.</li>
+            <li>Responsible for microservices related to proxying and data transformation.</li>
+            <li>Development work across other microservices.</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Semi-senior Java Backend / Big Data Engineer · Zaplabs</h4>
+            <p class="when">May 2018 – Oct 2020</p>
+          </div>
+          <ul>
+            <li>Developed a testing framework so other developers could create and run unit tests in NiFi pipelines.</li>
+            <li>Created APIs using Go, gRPC, and protocol buffers.</li>
+            <li>Created ETL as scheduled jobs in AWS using Go.</li>
+            <li>Wrote PostgreSQL queries.</li>
+            <li>Designed and built Java REST APIs.</li>
+            <li>Built flows with DynamoDB, Kinesis, Lambdas, and API Gateway.</li>
+            <li>Took part in architecture design sessions for new big-data flows, mainly on AWS.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="company">
+        <div class="company-head">
+          <h3>Softtek</h3>
+          <p>CDMX, México · Jul 2016 – May 2018</p>
+        </div>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Senior Java Developer · CitiBanamex</h4>
+            <p class="when">Jul 2016 – May 2018</p>
+          </div>
+          <ul>
+            <li>Designed, developed, and supported a distributed cache.</li>
+            <li>Developed complex algorithms.</li>
+            <li>Built a web UI for managing a cache system.</li>
+            <li>Designed and developed Java APIs.</li>
+            <li>Released 4 projects as application owner, using microservices.</li>
+            <li>Developed a sandbox environment to run infrastructure microservice components.</li>
+            <li>Main contact with global DevOps and development teams.</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <div class="role-top">
+            <h4>Semi-senior Java Developer · NBC Universal</h4>
+            <p class="when">Mar 2016 – Jul 2016</p>
+          </div>
+          <ul>
+            <li>Collaborated on level 2 support for a payment administration system.</li>
+            <li>Refactored modules including datetime, billing, and user management.</li>
+            <li>Optimized SQL queries for performance.</li>
+            <li>Developed automated data reporting systems.</li>
+            <li>Provided user support as a help desk representative.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top: 2.2rem;">
+      <p class="section-kicker">Summary of qualifications</p>
+      <h2>Skills</h2>
+      <div class="skills">
+        <article class="skill-group">
+          <h3>Technologies</h3>
+          <div class="chips"><span>Java</span><span>Python</span><span>Golang</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Spring Boot</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>APIs &amp; testing</h3>
+          <div class="chips"><span>REST</span><span>Web services</span><span>JUnit</span><span>Mockito</span><span>JMockit</span><span>TDD</span><span>BDD</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Architecture</h3>
+          <div class="chips"><span>GoF</span><span>Event driven</span><span>Domain driven</span><span>Design</span><span>MVC</span><span>Hexagonal</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>IDEs &amp; tools</h3>
+          <div class="chips"><span>IntelliJ IDEA</span><span>Cursor</span><span>GoLand</span><span>PyCharm</span><span>Visual Studio Code</span><span>STS</span><span>Postman</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Code quality</h3>
+          <div class="chips"><span>SonarQube</span><span>Checkstyle</span><span>FindBugs</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>AI tools</h3>
+          <div class="chips"><span>GitHub Copilot</span><span>Microsoft Copilot</span><span>AWS Bedrock</span><span>Cursor</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Databases</h3>
+          <div class="chips"><span>SQL Server</span><span>MySQL</span><span>Oracle</span><span>AWS RDS</span><span>PostgreSQL</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>NoSQL</h3>
+          <div class="chips"><span>DynamoDB</span><span>MongoDB</span><span>Redis</span><span>GemFire</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Cloud</h3>
+          <div class="chips"><span>AWS</span><span>PCF</span><span>OpenShift</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Microservices</h3>
+          <div class="chips"><span>Spring Boot</span><span>Dropwizard</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Queues</h3>
+          <div class="chips"><span>AWS SQS</span><span>Kafka</span><span>RabbitMQ</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Build</h3>
+          <div class="chips"><span>Gradle</span><span>Maven</span><span>Ant</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Ticketing</h3>
+          <div class="chips"><span>Jira</span><span>ServiceNow</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>SCM</h3>
+          <div class="chips"><span>Git</span><span>SVN</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Containers</h3>
+          <div class="chips"><span>Docker</span><span>Kubernetes</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Service discovery</h3>
+          <div class="chips"><span>Eureka</span><span>Zookeeper</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>ORM</h3>
+          <div class="chips"><span>Hibernate</span></div>
+        </article>
+        <article class="skill-group">
+          <h3>Code coverage</h3>
+          <div class="chips"><span>JaCoCo</span></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="bottom" id="education">
+      <article class="edu">
+        <p class="section-kicker">Education</p>
+        <h3>BS, Systems Engineering</h3>
+        <p class="meta">Universidad Tecnológica de Tulancingo</p>
+        <p class="meta">Tulancingo, Hidalgo, México · Sep 2009 – May 2013</p>
+      </article>
+      <article class="langs">
+        <p class="section-kicker">Languages</p>
+        <h3>Spanish</h3>
+        <p class="meta">Native speaker</p>
+        <h3>English</h3>
+        <p class="meta">Advanced</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <a class="pdf" href="Fullstack_JoseDavidLopezHdez_v2.1.pdf" data-open-pdf>Open the original PDF</a>
+  </footer>
+
+  <dialog id="pdf-dialog" class="pdf-dialog" aria-labelledby="pdf-dialog-title">
+    <div class="pdf-dialog-bar">
+      <strong id="pdf-dialog-title">José David López</strong>
+      <button type="button" class="pdf-close" data-close-pdf>Close</button>
+    </div>
+    <iframe title="Résumé PDF"></iframe>
+  </dialog>
+  <script src="scripts/OpenPDF.js"></script>
 </body>
 </html>
