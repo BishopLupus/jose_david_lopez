@@ -1,10 +1,32 @@
     const nav = document.querySelector(".topbar");
+    const bottomNav = document.querySelector(".bottombar");
+    const menuToggle = document.querySelector(".menu-toggle");
     const setNavOffset = () => {
       document.documentElement.style.setProperty(
         "--nav-offset",
         `${Math.ceil(nav.getBoundingClientRect().height + 18)}px`
       );
+      if (bottomNav) {
+        document.documentElement.style.setProperty(
+          "--bottom-offset",
+          `${Math.ceil(bottomNav.getBoundingClientRect().height + 16)}px`
+        );
+      }
     };
+    const setMenuOpen = (open) => {
+      nav.classList.toggle("is-open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      setNavOffset();
+    };
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+    });
+    nav.querySelectorAll(".header-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 760px)").matches) setMenuOpen(false);
+      });
+    });
     setNavOffset();
     window.addEventListener("resize", setNavOffset);
 
